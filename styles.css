@@ -2,3 +2,60 @@
 @media(max-width:900px){.product-grid{grid-template-columns:repeat(2,1fr)}.cake-grid{grid-template-columns:repeat(2,1fr)}.menu-section,.cake-section,.poster-section{padding-left:5%;padding-right:5%}}
 @media(max-width:560px){.topbar{height:60px;padding:0 5%}.wordmark{font-size:20px}.nav{gap:14px}.nav a{font-size:10px}.nav-order{padding:8px 11px}.hero{min-height:560px}.hero-inner{padding:67px 24px}.hero h1{font-size:61px}.hero-description{font-size:13px}.flower{font-size:116px}.flower-one{right:-20px;top:18px}.flower-two{left:-27px;bottom:-52px;font-size:110px}.menu-section,.cake-section,.poster-section{padding:62px 5%}.section-intro{margin-bottom:25px}.section-intro h2,.order-section h2{font-size:40px}.filter-row{gap:5px;flex-wrap:wrap}.filter-button{padding:8px 12px;font-size:9px}.product-grid{gap:9px}.product-card{min-height:194px;padding:22px 13px 13px}.product-card h3{font-size:17px}.product-category{font-size:6px;letter-spacing:.13em}.cake-grid{grid-template-columns:1fr;gap:10px}.cake-card{min-height:0;padding:22px 18px}.cake-card h3{min-height:0}.cake-flavours{min-height:0}.poster-grid{grid-template-columns:1fr;gap:17px;max-width:370px}.poster-grid figure{padding:9px}.order-section{min-height:340px;padding:61px 21px}.order-flower{font-size:73px;right:0;top:14px;opacity:.38}.footer{padding:18px 5%;min-height:100px;gap:12px;flex-wrap:wrap}.footer .wordmark{font-size:15px}.footer span{order:3;width:100%;text-align:center}.footer>a:last-child{margin-left:auto}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.product-card,.pill-button{transition:none}}
+
+/* Photo-led introduction inspired by the Cakescape reference, using Pavi's own imagery and menu. */
+.hero{min-height:clamp(250px,35vw,410px);display:block;overflow:visible;background:#f5e7da;border:0;position:relative}
+.hero-image{position:absolute;inset:0;background-image:linear-gradient(90deg,#fff8eddd 0%,#fff8edb8 31%,#fff8ed22 59%,transparent 100%),url("assets/bakery-hero.jpg");background-position:center 54%;background-size:cover}
+.hero-seal{position:absolute;z-index:2;left:50%;bottom:-43px;transform:translateX(-50%);width:88px;height:88px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#df9fa4;border:5px solid #fffaf4;color:white;text-decoration:none;box-shadow:0 4px 14px #4a2f241b}
+.hero-seal span{font:italic 19px var(--serif);letter-spacing:.02em;line-height:1}
+.hero-seal small{font-size:8px;letter-spacing:.2em;margin-top:5px}
+.hero-intro{padding:64px 20px 39px;text-align:center;background:#fffdf8}
+.hero-intro .eyebrow{margin:0 0 10px}
+.hero-intro h1{font:500 clamp(35px,5vw,51px)/1.15 var(--serif);letter-spacing:-.035em;color:var(--berry);margin:0 0 10px}
+.hero-intro h1 em{font-weight:500}
+.hero-intro>p:not(.eyebrow){max-width:520px;margin:0 auto 21px;color:var(--muted);font-size:13px;line-height:1.7}
+.hero-intro .hero-note{margin:15px 0 0;font-size:10px;color:#76695e}
+.hero-note span{padding:0 5px;color:#c28084}
+.why-section{padding:76px max(6%,calc((100vw - 1050px)/2));background:#fffdf8}
+.why-section .section-intro{margin-bottom:30px}
+.why-grid{max-width:980px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.why-card{min-height:180px;padding:27px 24px;background:#fff8ed;border:1px solid #f0e2d5;text-align:center}
+.why-card>span{color:#bd7c80;font-size:21px}
+.why-card h3{font:600 18px var(--serif);color:#493b36;margin:12px 0 8px}
+.why-card p{max-width:245px;margin:auto;color:var(--muted);font-size:11px;line-height:1.7}
+@media(max-width:650px){.hero{min-height:250px}.hero-image{background-image:linear-gradient(90deg,#fff8ede8 0%,#fff8edb8 48%,#fff8ed33 100%),url("assets/bakery-hero.jpg");background-position:58% center}.hero-intro{padding:60px 22px 34px}.hero-intro h1{font-size:39px}.why-section{padding:60px 5%}.why-grid{grid-template-columns:1fr;gap:10px}.why-card{min-height:0;padding:22px 18px}.nav{gap:12px}.nav a{font-size:9px}}
+
+.refine-toolbar{max-width:900px;margin:0 auto 12px;padding:17px 20px;background:#fffdf9;border:1px solid #eee2d8;display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:start;gap:20px}
+.refine-panel{min-width:0}
+.refine-panel>summary{list-style:none;display:flex;align-items:center;gap:12px;cursor:pointer;text-transform:uppercase;font-size:12px;font-weight:600;letter-spacing:.12em;color:#66564f}
+.refine-panel>summary::-webkit-details-marker{display:none}
+.chevron{width:10px;height:10px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-3px);transition:transform .18s}
+.refine-panel[open] .chevron{transform:rotate(225deg) translate(-2px,-1px)}
+.refine-content{display:grid;grid-template-columns:minmax(220px,1fr) minmax(220px,1fr);gap:30px;margin-top:18px}
+.price-filter{border:0;padding:0;margin:0;min-width:0}
+.price-filter legend,.phrase-filter{display:block;color:#292421;font-weight:700;font-size:14px;margin-bottom:12px}
+.price-inputs{display:grid;grid-template-columns:minmax(80px,1fr) auto minmax(80px,1fr);align-items:center;gap:9px}
+.price-inputs input,.search-field{height:42px;border:1px solid #d1bdb0;border-radius:5px;background:#fff;padding:0 12px;color:var(--ink);font:12px var(--sans);min-width:0}
+.price-inputs input:focus,.search-field:focus-within{outline:2px solid #cf9b9e;outline-offset:1px}
+.price-inputs input::placeholder,.search-field input::placeholder{color:#968a82}
+.price-inputs>span{color:#85776e}
+.range-slider{position:relative;height:32px;margin:12px 0 3px;--range-start:0%;--range-end:100%}
+.range-rail,.range-selected{position:absolute;height:4px;left:0;right:0;top:14px;border-radius:5px;background:#eadbd3}
+.range-selected{left:var(--range-start);right:calc(100% - var(--range-end));background:#8c4b54}
+.range-slider input[type="range"]{appearance:none;-webkit-appearance:none;position:absolute;left:0;top:0;width:100%;height:32px;margin:0;background:transparent;pointer-events:none}
+.range-slider input[type="range"]::-webkit-slider-runnable-track{height:4px;background:transparent}
+.range-slider input[type="range"]::-moz-range-track{height:4px;background:transparent}
+.range-slider input[type="range"]::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:19px;height:19px;margin-top:-7px;border:4px solid #fff;background:#8c4b54;border-radius:50%;box-shadow:0 0 0 1px #8c4b54;pointer-events:auto;cursor:grab}
+.range-slider input[type="range"]::-moz-range-thumb{width:12px;height:12px;border:4px solid #fff;background:#8c4b54;border-radius:50%;box-shadow:0 0 0 1px #8c4b54;pointer-events:auto;cursor:grab}
+.range-labels{display:flex;justify-content:space-between;color:#85776e;font-size:11px}
+.phrase-filter{margin:0}
+.search-field{display:flex;align-items:center;gap:8px;margin-top:11px;padding:0 10px;font-weight:400}
+.search-field svg{width:18px;height:18px;fill:none;stroke:#8d7e74;stroke-width:1.7;flex:0 0 auto}
+.search-field input{border:0;outline:0;width:100%;min-width:0;background:transparent;font:12px var(--sans);color:var(--ink)}
+.sort-control{display:flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:.12em;font-size:12px;font-weight:600;color:#66564f;white-space:nowrap}
+.sort-control select{max-width:165px;height:34px;padding:0 27px 0 10px;border:1px solid #eee2d8;border-radius:4px;background:#fffdf9;color:#51443e;font:11px var(--sans);letter-spacing:0;text-transform:none}
+.clear-filters{align-self:start;border:0;background:none;padding:9px 0;color:#8c4b54;font:600 10px var(--sans);text-decoration:underline;text-underline-offset:3px;cursor:pointer;white-space:nowrap}
+.clear-filters:hover{color:#632f39}
+.menu-results{max-width:900px;margin:0 auto 12px;color:#82756c;font-size:10px;text-align:right}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:650px){.refine-toolbar{grid-template-columns:1fr auto;padding:15px;gap:14px}.refine-panel{grid-column:1/-1}.refine-content{grid-template-columns:1fr;gap:20px}.sort-control{grid-column:1;grid-row:2}.clear-filters{grid-column:2;grid-row:2;justify-self:end}.menu-results{margin-bottom:12px}.range-slider{margin-top:14px}}

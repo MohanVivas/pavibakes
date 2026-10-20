@@ -14,26 +14,65 @@
 <body>
   <header class="topbar">
     <a class="wordmark" href="#home">pavibakes</a>
-    <nav class="nav" aria-label="Main navigation"><a href="#cookies">Cookies</a><a href="#cakes">Cakes</a><a class="nav-order" href="#order">Order <span>↗</span></a></nav>
+    <nav class="nav" aria-label="Main navigation"><a href="#cookies">Cookies</a><a href="#cakes">Cakes</a><a href="#why">Why Pavi</a><a class="nav-order" href="#order">Order <span>↗</span></a></nav>
   </header>
   <main>
-    <section class="hero" id="home">
-      <span class="flower flower-one" aria-hidden="true">✿</span><span class="flower flower-two" aria-hidden="true">✿</span>
-      <div class="hero-inner"><p class="eyebrow">A LITTLE SWEETNESS FOR THE SEASON</p><h1>Deepavali<br><em>Collection</em></h1><p class="hero-description">Handcrafted cookies, cakes and brownies made for sharing, gifting and making the celebration a little sweeter.</p><a class="pill-button" href="#cookies">Explore the menu <span>↓</span></a><p class="hero-note">Made with pure butter · 100% eggless</p></div>
+    <section class="hero" id="home" aria-label="Pavi Bakes bakery">
+      <div class="hero-image" aria-hidden="true"></div>
+      <a class="hero-seal" href="#home" aria-label="Pavi Bakes home"><span>pavi</span><small>bakes</small></a>
+    </section>
+    <section class="hero-intro">
+      <p class="eyebrow">A LITTLE SWEETNESS FOR THE SEASON</p>
+      <h1>Deepavali <em>Collection</em></h1>
+      <p>Butter-rich cakes, festive cookies and brownies for sharing with the people you love.</p>
+      <a class="pill-button" href="#cookies">Explore the menu <span>↓</span></a>
+      <div class="hero-note">Made with pure butter <span>·</span> 100% eggless cookies</div>
     </section>
 
     <section class="menu-section cookies-section" id="cookies">
       <div class="section-intro"><p class="eyebrow">SMALL TREATS, BIG JOY</p><h2>Cookies <em>&amp; Tarts</em></h2><p>Freshly baked favourites, packed by the piece count shown.</p></div>
+      <div class="refine-toolbar" aria-label="Menu filters and sorting">
+        <details class="refine-panel" open>
+          <summary>Refine by <span class="chevron" aria-hidden="true"></span></summary>
+          <div class="refine-content">
+            <fieldset class="price-filter">
+              <legend>Price</legend>
+              <div class="price-inputs">
+                <label class="visually-hidden" for="price-from">Minimum price in Malaysian ringgit</label>
+                <input id="price-from" type="number" min="32" max="150" step="1" placeholder="from" inputmode="numeric">
+                <span aria-hidden="true">–</span>
+                <label class="visually-hidden" for="price-to">Maximum price in Malaysian ringgit</label>
+                <input id="price-to" type="number" min="32" max="150" step="1" placeholder="to" inputmode="numeric">
+              </div>
+              <div class="range-slider" id="price-range" style="--range-start:0%;--range-end:100%">
+                <div class="range-rail" aria-hidden="true"></div>
+                <div class="range-selected" aria-hidden="true"></div>
+                <input id="range-from" type="range" min="32" max="150" value="32" aria-label="Minimum price slider">
+                <input id="range-to" type="range" min="32" max="150" value="150" aria-label="Maximum price slider">
+              </div>
+              <div class="range-labels"><span id="range-from-label">RM32</span><span id="range-to-label">RM150</span></div>
+            </fieldset>
+            <label class="phrase-filter" for="menu-search">Search by phrase
+              <span class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.7"></circle><path d="m16 16 5 5"></path></svg><input id="menu-search" type="search" placeholder="Keyword or phrase" autocomplete="off"></span>
+            </label>
+          </div>
+        </details>
+        <label class="sort-control" for="menu-sort">Sort by
+          <select id="menu-sort"><option value="featured">Featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="name-asc">Name: A to Z</option></select>
+        </label>
+        <button class="clear-filters" id="clear-filters" type="button">Clear filters</button>
+      </div>
+      <p class="menu-results" id="menu-results" aria-live="polite">Showing all 14 treats</p>
       <div class="filter-row" role="group" aria-label="Filter cookie menu"><button class="filter-button active" data-filter="all" aria-pressed="true">All treats</button><button class="filter-button" data-filter="tart" aria-pressed="false">Tarts</button><button class="filter-button" data-filter="byte" aria-pressed="false">Bytes</button><button class="filter-button" data-filter="more" aria-pressed="false">More treats</button></div>
       <div class="product-grid cookie-grid">
-        <article class="product-card" data-kind="more"><span class="product-flower">✦</span><p class="product-category">A CLASSIC FAVOURITE</p><h3>Almond London</h3><p class="product-detail">28 pieces</p><p class="price">RM 38</p><a class="product-link" href="#order">Enquire <span>↗</span></a></article>
-        <article class="product-card" data-kind="tart"><span class="product-flower">✿</span><p class="product-category">RICH &amp; CHOCOLATY</p><h3>Cadbury Tarts</h3><p class="product-detail">21 pieces</p><p class="price">RM 32</p><a class="product-link" href="#order">Enquire <span>↗</span></a></article>
-        <article class="product-card" data-kind="tart"><span class="product-flower">✿</span><p class="product-category">A FESTIVE CLASSIC</p><h3>Pineapple Tarts</h3><p class="product-detail">45 pieces</p><p class="price">RM 40</p><a class="product-link" href="#order">Enquire <span>↗</span></a></article>
-        <article class="product-card" data-kind="byte"><span class="product-flower">✦</span><p class="product-category">LITTLE &amp; CRUNCHY</p><h3>Hazelnut Bytes</h3><p class="product-detail">35 pieces</p><p class="price">RM 40</p><a class="product-link" href="#order">Enquire <span>↗</span></a></article>
-        <article class="product-card" data-kind="byte"><span class="product-flower">✦</span><p class="product-category">PISTACHIO GOODNESS</p><h3>Pistachio Bytes</h3><p class="product-detail">35 pieces</p><p class="price">RM 45</p><a class="product-link" href="#order">Enquire <span>↗</span></a></article>
-        <article class="product-card" data-kind="tart"><span class="product-flower">✿</span><p class="product-category">A NUTTY LITTLE BITE</p><h3>Hazelnut Tarts</h3><p class="product-detail">40 pieces</p><p class="price">RM 45</p><a class="product-link" href="#order">Enquire <span>↗</span></a></article>
-        <article class="product-card" data-kind="more"><span class="product-flower">✦</span><p class="product-category">RICH &amp; TOASTY</p><h3>Afghan Walnut</h3><p class="product-detail">40 pieces</p><p class="price">RM 42</p><a class="product-link" href="#order">Enquire <span>↗</span></a></article>
-        <article class="product-card" data-kind="more"><span class="product-flower">✦</span><p class="product-category">LIGHT &amp; CRISP</p><h3>Cranberry Cornflakes</h3><p class="product-detail">45 pieces</p><p class="price">RM 42</p><a class="product-link" href="#order">Enquire <span>↗</span></a></article>
+        <article class="product-card catalog-item" data-kind="more" data-price="38"><span class="product-flower">✦</span><p class="product-category">A CLASSIC FAVOURITE</p><h3>Almond London</h3><p class="product-detail">28 pieces</p><p class="price">RM 38</p><a class="product-link" href="#order">Enquire <span>↗</span></a></article>
+        <article class="product-card catalog-item" data-kind="tart" data-price="32"><span class="product-flower">✿</span><p class="product-category">RICH &amp; CHOCOLATY</p><h3>Cadbury Tarts</h3><p class="product-detail">21 pieces</p><p class="price">RM 32</p><a class="product-link" href="#order">Enquire <span>↗</span></a></article>
+        <article class="product-card catalog-item" data-kind="tart" data-price="40"><span class="product-flower">✿</span><p class="product-category">A FESTIVE CLASSIC</p><h3>Pineapple Tarts</h3><p class="product-detail">45 pieces</p><p class="price">RM 40</p><a class="product-link" href="#order">Enquire <span>↗</span></a></article>
+        <article class="product-card catalog-item" data-kind="byte" data-price="40"><span class="product-flower">✦</span><p class="product-category">LITTLE &amp; CRUNCHY</p><h3>Hazelnut Bytes</h3><p class="product-detail">35 pieces</p><p class="price">RM 40</p><a class="product-link" href="#order">Enquire <span>↗</span></a></article>
+        <article class="product-card catalog-item" data-kind="byte" data-price="45"><span class="product-flower">✦</span><p class="product-category">PISTACHIO GOODNESS</p><h3>Pistachio Bytes</h3><p class="product-detail">35 pieces</p><p class="price">RM 45</p><a class="product-link" href="#order">Enquire <span>↗</span></a></article>
+        <article class="product-card catalog-item" data-kind="tart" data-price="45"><span class="product-flower">✿</span><p class="product-category">A NUTTY LITTLE BITE</p><h3>Hazelnut Tarts</h3><p class="product-detail">40 pieces</p><p class="price">RM 45</p><a class="product-link" href="#order">Enquire <span>↗</span></a></article>
+        <article class="product-card catalog-item" data-kind="more" data-price="42"><span class="product-flower">✦</span><p class="product-category">RICH &amp; TOASTY</p><h3>Afghan Walnut</h3><p class="product-detail">40 pieces</p><p class="price">RM 42</p><a class="product-link" href="#order">Enquire <span>↗</span></a></article>
+        <article class="product-card catalog-item" data-kind="more" data-price="42"><span class="product-flower">✦</span><p class="product-category">LIGHT &amp; CRISP</p><h3>Cranberry Cornflakes</h3><p class="product-detail">45 pieces</p><p class="price">RM 42</p><a class="product-link" href="#order">Enquire <span>↗</span></a></article>
       </div>
       <p class="menu-footnote"><span>✿</span> Made of pure butter &amp; 100% eggless</p>
     </section>
@@ -41,16 +80,25 @@
     <section class="cake-section" id="cakes">
       <div class="section-intro"><p class="eyebrow">FOR THE CENTRE OF YOUR TABLE</p><h2>Deepavali <em>Cakes</em></h2><p>Choose your celebration bake, then get in touch to place an order.</p></div>
       <div class="cake-grid">
-        <article class="cake-card"><div class="cake-number">01</div><p class="product-category">PAALKOVA BUTTER ICING</p><h3>Butter Cake Collection</h3><p class="cake-flavours">Pure Classic Butter, Orange, Lemon or Pandan Butter Cake with Paalkova Butter Icing.</p><div class="cake-price">RM 140 <span>· 36 pcs</span></div></article>
-        <article class="cake-card"><div class="cake-number">02</div><p class="product-category">A LITTLE EXTRA SPECIAL</p><h3>Celebration Cakes</h3><p class="cake-flavours">Pandan Gula Melaka with Swiss Meringue Buttercream, Chocolate Cake with Chocolate Ganache, or Pistachio Kunafa Brownies.</p><div class="cake-price">RM 150 <span>· 36 pcs</span></div></article>
-        <article class="cake-card"><div class="cake-number">03</div><p class="product-category">NO FROSTING, ALL FLAVOUR</p><h3>Plain Butter Cakes</h3><p class="cake-flavours">Classic, Orange, Lemon Poppyseed, Pandan or Chocolate.</p><div class="cake-price">RM 85 <span>· 36 pcs</span></div></article>
-        <article class="cake-card"><div class="cake-number">04</div><p class="product-category">FRUITY &amp; BRIGHT</p><h3>Orange Chocolate / Lemon Raspberry</h3><p class="cake-flavours">Plain pure butter cakes without frosting.</p><div class="cake-price">RM 120 <span>· 36 pcs</span></div></article>
-        <article class="cake-card"><div class="cake-number">05</div><p class="product-category">NUTTY BROWNIES</p><h3>Walnut / Almond Brownies</h3><p class="cake-flavours">A rich brownie box made for sharing.</p><div class="cake-price">RM 85 <span>· 36 pcs</span></div></article>
-        <article class="cake-card"><div class="cake-number">06</div><p class="product-category">DEEP CHOCOLATE</p><h3>Fudgy Chocolate Brownies</h3><p class="cake-flavours">Soft, fudgy centres with plenty of chocolate flavour.</p><div class="cake-price">RM 70 <span>· 36 pcs</span></div></article>
+        <article class="cake-card catalog-item" data-price="140"><div class="cake-number">01</div><p class="product-category">PAALKOVA BUTTER ICING</p><h3>Butter Cake Collection</h3><p class="cake-flavours">Pure Classic Butter, Orange, Lemon or Pandan Butter Cake with Paalkova Butter Icing.</p><div class="cake-price">RM 140 <span>· 36 pcs</span></div></article>
+        <article class="cake-card catalog-item" data-price="150"><div class="cake-number">02</div><p class="product-category">A LITTLE EXTRA SPECIAL</p><h3>Celebration Cakes</h3><p class="cake-flavours">Pandan Gula Melaka with Swiss Meringue Buttercream, Chocolate Cake with Chocolate Ganache, or Pistachio Kunafa Brownies.</p><div class="cake-price">RM 150 <span>· 36 pcs</span></div></article>
+        <article class="cake-card catalog-item" data-price="85"><div class="cake-number">03</div><p class="product-category">NO FROSTING, ALL FLAVOUR</p><h3>Plain Butter Cakes</h3><p class="cake-flavours">Classic, Orange, Lemon Poppyseed, Pandan or Chocolate.</p><div class="cake-price">RM 85 <span>· 36 pcs</span></div></article>
+        <article class="cake-card catalog-item" data-price="120"><div class="cake-number">04</div><p class="product-category">FRUITY &amp; BRIGHT</p><h3>Orange Chocolate / Lemon Raspberry</h3><p class="cake-flavours">Plain pure butter cakes without frosting.</p><div class="cake-price">RM 120 <span>· 36 pcs</span></div></article>
+        <article class="cake-card catalog-item" data-price="85"><div class="cake-number">05</div><p class="product-category">NUTTY BROWNIES</p><h3>Walnut / Almond Brownies</h3><p class="cake-flavours">A rich brownie box made for sharing.</p><div class="cake-price">RM 85 <span>· 36 pcs</span></div></article>
+        <article class="cake-card catalog-item" data-price="70"><div class="cake-number">06</div><p class="product-category">DEEP CHOCOLATE</p><h3>Fudgy Chocolate Brownies</h3><p class="cake-flavours">Soft, fudgy centres with plenty of chocolate flavour.</p><div class="cake-price">RM 70 <span>· 36 pcs</span></div></article>
       </div>
     </section>
 
     <section class="poster-section" id="posters"><div class="section-intro"><p class="eyebrow">THE FESTIVE MENU, AT A GLANCE</p><h2>Take a <em>closer look</em></h2><p>Save or share the original menu cards with your family.</p></div><div class="poster-grid"><figure><img src="assets/deepavali-cookies.jpeg" alt="Original Pavi Bakes Deepavali Cookies List poster"><figcaption>Deepavali Cookies List</figcaption></figure><figure><img src="assets/deepavali-cakes.jpeg" alt="Original Pavi Bakes Deepavali Cakes menu poster"><figcaption>Deepavali Cakes Menu</figcaption></figure></div></section>
+
+    <section class="why-section" id="why">
+      <div class="section-intro"><p class="eyebrow">A LITTLE ABOUT OUR BAKES</p><h2>Made for <em>sharing.</em></h2><p>Thoughtful treats for festive tables, gifting and everyday celebrations.</p></div>
+      <div class="why-grid">
+        <article class="why-card"><span aria-hidden="true">✿</span><h3>Pure butter</h3><p>Our festive cookies and butter cakes are made with pure butter.</p></article>
+        <article class="why-card"><span aria-hidden="true">♡</span><h3>Eggless cookies</h3><p>The Deepavali cookie selection is 100% eggless.</p></article>
+        <article class="why-card"><span aria-hidden="true">✦</span><h3>Plenty to choose from</h3><p>Cookies, tarts, celebration cakes and brownies, with prices and piece counts shown.</p></article>
+      </div>
+    </section>
 
     <section class="order-section" id="order"><span class="order-flower" aria-hidden="true">✿</span><p class="eyebrow">MADE WITH CARE FOR YOUR CELEBRATIONS</p><h2>Make it a little <em>sweeter.</em></h2><p>Add a note about what you’d like and we’ll get back to you.</p><a class="pill-button" href="mailto:hello@pavibakes.com?subject=Deepavali%20order%20enquiry">Enquire about an order <span>↗</span></a><small>For cookies, cakes, brownies &amp; gifting boxes</small></section>
   </main>
